@@ -20,33 +20,22 @@ class MainActivity : AppCompatActivity() {
             rln_show.visibility=View.INVISIBLE
 
     }, 1000)
-        arr.add(TicketContact(1,"Hamza Slama","description"))
-        arr.add(TicketContact(1,"Hamza Slama","description"))
-        arr.add(TicketContact(1,"Hamza Slama","description"))
-        arr.add(TicketContact(1,"Hamza Slama","description"))
-        arr.add(TicketContact(2,"Bilel Slama","description"))
-        arr.add(TicketContact(2,"Bilel Slama","description"))
-        arr.add(TicketContact(2,"Bilel Slama","description"))
-        arr.add(TicketContact(3,"islem Slama","description"))
-        arr.add(TicketContact(3,"islem Slama","description"))
-        arr.add(TicketContact(3,"islem Slama","description"))
-        arr.add(TicketContact(4,"Moataz Ben","description"))
-        arr.add(TicketContact(5,"zoubair Tourki","description"))
-        arr.add(TicketContact(5,"zoubair Tourki","description"))
-        arr.add(TicketContact(5,"zoubair Tourki","description"))
-        arr.add(TicketContact(5,"zoubair Tourki","description"))
-        arr.add(TicketContact(5,"zoubair Tourki","description"))
-        arr.add(TicketContact(6,"abrar Abrar","description"))
-        arr.add(TicketContact(7,"cheima Elj","description"))
-        arr.add(TicketContact(7,"cheima Elj","description"))
-        arr.add(TicketContact(7,"cheima Elj","description"))
-        arr.add(TicketContact(7,"cheima Elj","description"))
-        arr.add(TicketContact(7,"cheima Elj","description"))
-        arr.add(TicketContact(7,"cheima Elj","description"))
-        arr.add(TicketContact(8,"hamza","description" ))
-        arr.add(TicketContact(8,"Riadh ellouze","description" ))
-        arr.add(TicketContact(8,"Riadh ellouze","description" ))
-        arr.add(TicketContact(8,"Riadh ellouze","description" ))
+        arr.add(TicketContact(1,"\t\n" +
+                "Oscar ","description"))
+        arr.add(TicketContact(1,"AZERTY ","description"))
+        arr.add(TicketContact(1,"Noah","description"))
+        arr.add(TicketContact(1,"Noah ","description"))
+        arr.add(TicketContact(1,"\t\n" +
+                "Oscar ","description"))
+        arr.add(TicketContact(1,"Charlie ","description"))
+        arr.add(TicketContact(1,"Lily ","description"))
+        arr.add(TicketContact(1,"Jacob ","description"))
+        arr.add(TicketContact(1,"Sophia ","description"))
+        arr.add(TicketContact(1,"Sophia ","description"))
+        arr.add(TicketContact(1,"Alfie ","description"))
+        arr.add(TicketContact(1,"\t\n" +
+                "Oscar ","description"))
+
         Collections.sort(arr, object : Comparator<TicketContact> {
             override fun compare(news1: TicketContact, news2: TicketContact): Int {
 
