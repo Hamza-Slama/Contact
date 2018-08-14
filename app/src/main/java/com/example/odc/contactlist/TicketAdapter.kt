@@ -13,11 +13,10 @@ import com.example.odc.contactlist.R.color.A
 import java.util.ArrayList
 import java.util.logging.Handler
 
-class TicketAdapter(private val mDataset: ArrayList<TicketContact>) : RecyclerView.Adapter<TicketAdapter.DataObjectHolder>() {
+class TicketAdapter(private val mDataset: ArrayList<TicketContact>, private var communication: Communication) : RecyclerView.Adapter<TicketAdapter.DataObjectHolder>() {
 
 
     private var context: Context? = null
-
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataObjectHolder {
@@ -30,11 +29,81 @@ class TicketAdapter(private val mDataset: ArrayList<TicketContact>) : RecyclerVi
     override fun onBindViewHolder(holder: DataObjectHolder, position: Int) {
 
 
+        holder.tv_name.text = mDataset[position].name + position
+        holder.label_caractere.text = "${mDataset[position].name.first().toUpperCase()}"
+//        while ((position + 1 < mDataset.size - 1 && (mDataset[position].name.first().toUpperCase() != mDataset[position + 1].name.first().toUpperCase())
+//                        || (position - 1 > 0 && mDataset[position].name.first().toUpperCase() != mDataset[position - 1].name.first().toUpperCase()))) {
 
+            if (mDataset[position].name.first().toUpperCase() == 'A') {
+                communication.listener(position, 'A'.toString())
 
-        holder.tv_name.setText(mDataset[position].name)
-        holder.label_caractere.setText("${mDataset[position].name.first().toUpperCase()}")
+            } else if (mDataset[position].name.first().toUpperCase() == 'B') {
+                communication.listener(position, 'B'.toString())
 
+            } else if (mDataset[position].name.first().toUpperCase() == 'C') {
+                communication.listener(position, 'C'.toString())
+
+            } else if (mDataset[position].name.first().toUpperCase() == 'D') {
+                communication.listener(position, 'D'.toString())
+
+            } else if (mDataset[position].name.first().toUpperCase() == 'O') {
+                communication.listener(position, 'O'.toString())
+
+            } else if (mDataset[position].name.first().toUpperCase() == 'N') {
+                communication.listener(position, 'N'.toString())
+
+            } else if (mDataset[position].name.first().toUpperCase() == 'S') {
+                communication.listener(position, 'S'.toString())
+
+            } else if (mDataset[position].name.first().toUpperCase() == 'L') {
+                communication.listener(position, 'L'.toString())
+
+            }
+
+//            when (mDataset[position].name.first().toUpperCase()) {
+//
+//                'A' -> {
+//                    communication.listener(position, 'A'.toString())
+//
+//                }
+//                'B' -> {
+//                    communication.listener(position, 'B'.toString())
+//                }
+//                'C' -> {
+//                    communication.listener(position, 'C'.toString())
+//                }
+//                'D' -> {
+//                    communication.listener(position, 'D'.toString())
+//                }
+//                'E' -> {
+//                    communication.listener(position, 'E'.toString())
+//                }
+//                'F' -> {
+//                    communication.listener(position, 'F'.toString())
+//                }
+//                'G' -> {
+//                    communication.listener(position, 'G'.toString())
+//                }
+//                'O' -> {
+//                    communication.listener(position, 'O'.toString())
+//                }
+//                'N' -> {
+//                    communication.listener(position, 'N'.toString())
+//                }
+//                'L' -> {
+//                    communication.listener(position, 'L'.toString())
+//                }
+//                'J' -> {
+//                    communication.listener(position, 'J'.toString())
+//                }
+//                'H' -> {
+//                    communication.listener(position, 'H'.toString())
+//                }
+//                'S' -> {
+//                    communication.listener(position, 'S'.toString())
+//                }
+//            }
+//        }
 
 
     }
@@ -57,5 +126,8 @@ class TicketAdapter(private val mDataset: ArrayList<TicketContact>) : RecyclerVi
     }
 
 
+}
 
+interface Communication {
+    fun listener(position: Int, name: String)
 }

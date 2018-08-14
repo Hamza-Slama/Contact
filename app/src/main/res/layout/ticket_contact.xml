@@ -1,81 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+
+
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:id="@+id/holeThing"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="13dp"
 
-    android:layout_marginBottom="3dp"
-    android:elevation="13dp">
+    android:layout_centerHorizontal="true">
 
     <RelativeLayout
-android:layout_margin="10dp"
-        android:id="@+id/holeThing"
+
+        android:id="@+id/line1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true">
 
-        android:layout_centerHorizontal="true">
 
         <RelativeLayout
-
-            android:id="@+id/line1"
+            android:id="@+id/A"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true">
-
-
-            <RelativeLayout
-                android:id="@+id/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="1.5"
-                android:background="@drawable/rounded_text"
-                android:backgroundTint="@color/blue">
-
-                <TextView
-                    android:id="@+id/label_caractere"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_margin="6dp"
-
-                    android:gravity="center_vertical|center_horizontal"
-                    android:paddingEnd="5dp"
-                    android:paddingStart="5dp"
-                    android:text="H"
-                    android:textColor="@color/white"
-                    android:textSize="19sp" />
-
-
-            </RelativeLayout>
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/rl_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/line1">
+            android:alpha="1.5"
+            android:background="@drawable/rounded_text"
+            android:backgroundTint="@color/blueRoundTime">
 
             <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Hamza Slama"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/index_btn_color"
-                android:textSize="20dp" />
+                android:id="@+id/label_caractere"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="6dp"
+
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:text="H"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+
         </RelativeLayout>
 
+
     </RelativeLayout>
-    <!--<View-->
-        <!--android:layout_marginTop="5dp"-->
-        <!--android:layout_below="@+id/holeThing"-->
-        <!--android:background="#cecece"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="1dp" />-->
-</android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rl_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/line1">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Hamza Slama"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp" />
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rl_name"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="18dp"
+        android:background="#cecece"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</RelativeLayout>
+
+    <!--</android.support.v7.widget.CardView>-->

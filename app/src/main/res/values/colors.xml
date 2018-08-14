@@ -38,4 +38,15 @@
     <color name="G">#3867d6</color>
     <color name="H">#8854d0</color>
     <color name="blue">#4b8bf9</color>
+
+    <color name="lightWhite">#f5f7fA</color>
+    <color name="lightGrey">#b1b3b5</color>
+    <color name="grey">#767676</color>
+    <color name="black">#000000</color>
+    <color name="blueRoundTime">#232d49</color>
+    <color name="skyBlue">#51bbfc</color>
+    <color name="lightSkyBlue">#dcf1ff</color>
+    <color name="lightwhite">#ffffee</color>
+
+
 </resources>
