@@ -42,21 +42,28 @@ class MainActivity : AppCompatActivity() {
         rec.layoutManager = layoutManager
         adpater = TicketAdapter(arr, 0, true)
         rec.adapter = adpater
+        progress.visibility = View.INVISIBLE
 
         tvAge1.setOnClickListener {
+            progress.visibility = View.VISIBLE
             adpater = TicketAdapter(arr, 10, true)
             adpater!!.notifyDataSetChanged()
             rec.adapter = adpater
+            progress.visibility = View.INVISIBLE
         }
         tvAge2.setOnClickListener {
+            progress.visibility = View.VISIBLE
             adpater = TicketAdapter(arr, 20, true)
             adpater!!.notifyDataSetChanged()
             rec.adapter = adpater
+            progress.visibility = View.INVISIBLE
         }
         tvAge3.setOnClickListener {
+            progress.visibility = View.VISIBLE
             adpater = TicketAdapter(arr, 30, true)
             adpater!!.notifyDataSetChanged()
             rec.adapter = adpater
+            progress.visibility = View.INVISIBLE
         }
 
         rec.addOnScrollListener(object : RecyclerView.OnScrollListener() {
