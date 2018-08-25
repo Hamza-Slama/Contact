@@ -17,7 +17,7 @@ class TicketAdapter() : RecyclerView.Adapter<TicketAdapter.DataObjectHolder>() {
 
     private var mDataset: ArrayList<TicketContact>?=null
     constructor(mDataset: ArrayList<TicketContact> , Agefiltre : Int , desTri : Boolean) : this() {
-        this.mDataset = mDataset
+       // this.mDataset = mDataset
         this.mDataset = mDataset.filter { s -> s.age> Agefiltre } as ArrayList<TicketContact>
         if (mDataset.isNotEmpty()){
             if (desTri){

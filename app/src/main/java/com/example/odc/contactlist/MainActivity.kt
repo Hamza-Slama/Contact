@@ -38,11 +38,26 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
         var layoutManager = LinearLayoutManager(mContext)
         rec.layoutManager = layoutManager
-        adpater = TicketAdapter(    arr,30,true)
+        adpater = TicketAdapter(arr, 0, true)
         rec.adapter = adpater
+
+        tvAge1.setOnClickListener {
+            adpater = TicketAdapter(arr, 10, true)
+            adpater!!.notifyDataSetChanged()
+            rec.adapter = adpater
+        }
+        tvAge2.setOnClickListener {
+            adpater = TicketAdapter(arr, 20, true)
+            adpater!!.notifyDataSetChanged()
+            rec.adapter = adpater
+        }
+        tvAge3.setOnClickListener {
+            adpater = TicketAdapter(arr, 30, true)
+            adpater!!.notifyDataSetChanged()
+            rec.adapter = adpater
+        }
 
         rec.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 
@@ -81,37 +96,37 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun loadData(){
-        arr.add(TicketContact(1, "Oscar ", "description",12))
-        arr.add(TicketContact(1, "AZERTY ", "description",12))
-        arr.add(TicketContact(1, "Noah", "description",12))
-        arr.add(TicketContact(1, "Noah ", "description",12))
-        arr.add(TicketContact(1, "Noah", "description",12))
-        arr.add(TicketContact(1, "Noah ", "description",12))
-        arr.add(TicketContact(1, "Noah", "description",12))
+    private fun loadData() {
+        arr.add(TicketContact(1, "Oscar ", "description", 12))
+        arr.add(TicketContact(1, "AZERTY ", "description", 12))
+        arr.add(TicketContact(1, "Noah", "description", 12))
+        arr.add(TicketContact(1, "Noah ", "description", 12))
+        arr.add(TicketContact(1, "Noah", "description", 12))
+        arr.add(TicketContact(1, "Noah ", "description", 12))
+        arr.add(TicketContact(1, "Noah", "description", 12))
 //        arr.add(TicketContact(1, "Noah ", "description",12)))
-        arr.add(TicketContact(1, "Noah", "description",12))
-        arr.add(TicketContact(1, "Noah ", "description",45))
-        arr.add(TicketContact(1, "Noah", "description",33))
-        arr.add(TicketContact(1, "Noah ", "description",36))
-        arr.add(TicketContact(1, "Noah", "description",21))
-        arr.add(TicketContact(1, "Noah ", "description",33))
-        arr.add(TicketContact(1, "Noah", "description",46))
-        arr.add(TicketContact(1, "Noah ", "description",66))
-        arr.add(TicketContact(1, "Noah", "description",23))
-        arr.add(TicketContact(1, "Noah ", "description",28))
-        arr.add(TicketContact(1, "Noah", "description",23))
-        arr.add(TicketContact(1, "Noah ", "description",25))
+        arr.add(TicketContact(1, "Noah", "description", 12))
+        arr.add(TicketContact(1, "Noah ", "description", 45))
+        arr.add(TicketContact(1, "Noah", "description", 33))
+        arr.add(TicketContact(1, "Noah ", "description", 36))
+        arr.add(TicketContact(1, "Noah", "description", 21))
+        arr.add(TicketContact(1, "Noah ", "description", 33))
+        arr.add(TicketContact(1, "Noah", "description", 46))
+        arr.add(TicketContact(1, "Noah ", "description", 66))
+        arr.add(TicketContact(1, "Noah", "description", 23))
+        arr.add(TicketContact(1, "Noah ", "description", 28))
+        arr.add(TicketContact(1, "Noah", "description", 23))
+        arr.add(TicketContact(1, "Noah ", "description", 25))
 
-        arr.add(TicketContact(1, "Charlie ", "description",34))
-        arr.add(TicketContact(1, "Hamza ", "description",45))
-        arr.add(TicketContact(1, "Alfie ", "description",111))
-        arr.add(TicketContact(1, "Charlie ", "description",110))
-        arr.add(TicketContact(1, "Charlie ", "description",2))
-        arr.add(TicketContact(1, "Lily ", "description",11))
-        arr.add(TicketContact(1, "Jacob ", "description",14))
-        arr.add(TicketContact(1, "Sophia ", "description",13))
-        arr.add(TicketContact(1, "Sophia ", "description",2))
-        arr.add(TicketContact(1, "Alfie ", "description",22))
+        arr.add(TicketContact(1, "Charlie ", "description", 34))
+        arr.add(TicketContact(1, "Hamza ", "description", 45))
+        arr.add(TicketContact(1, "Alfie ", "description", 111))
+        arr.add(TicketContact(1, "Charlie ", "description", 110))
+        arr.add(TicketContact(1, "Charlie ", "description", 2))
+        arr.add(TicketContact(1, "Lily ", "description", 11))
+        arr.add(TicketContact(1, "Jacob ", "description", 14))
+        arr.add(TicketContact(1, "Sophia ", "description", 13))
+        arr.add(TicketContact(1, "Sophia ", "description", 2))
+        arr.add(TicketContact(1, "Alfie ", "description", 22))
     }
 }
