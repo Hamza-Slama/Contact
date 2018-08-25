@@ -37,16 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        Collections.sort(arr, object : Comparator<TicketContact> {
-            override fun compare(news1: TicketContact, news2: TicketContact): Int {
 
-                return news1.name!!.compareTo(news2.name!!)
-            }
-        })
 
         var layoutManager = LinearLayoutManager(mContext)
         rec.layoutManager = layoutManager
-        adpater = TicketAdapter(arr, communication)
+        adpater = TicketAdapter(    arr,30,true)
         rec.adapter = adpater
 
         rec.addOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -87,36 +82,36 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadData(){
-        arr.add(TicketContact(1, "Oscar ", "description"))
-        arr.add(TicketContact(1, "AZERTY ", "description"))
-        arr.add(TicketContact(1, "Noah", "description"))
-        arr.add(TicketContact(1, "Noah ", "description"))
-        arr.add(TicketContact(1, "Noah", "description"))
-        arr.add(TicketContact(1, "Noah ", "description"))
-        arr.add(TicketContact(1, "Noah", "description"))
-        arr.add(TicketContact(1, "Noah ", "description"))
-        arr.add(TicketContact(1, "Noah", "description"))
-        arr.add(TicketContact(1, "Noah ", "description"))
-        arr.add(TicketContact(1, "Noah", "description"))
-        arr.add(TicketContact(1, "Noah ", "description"))
-        arr.add(TicketContact(1, "Noah", "description"))
-        arr.add(TicketContact(1, "Noah ", "description"))
-        arr.add(TicketContact(1, "Noah", "description"))
-        arr.add(TicketContact(1, "Noah ", "description"))
-        arr.add(TicketContact(1, "Noah", "description"))
-        arr.add(TicketContact(1, "Noah ", "description"))
-        arr.add(TicketContact(1, "Noah", "description"))
-        arr.add(TicketContact(1, "Noah ", "description"))
+        arr.add(TicketContact(1, "Oscar ", "description",12))
+        arr.add(TicketContact(1, "AZERTY ", "description",12))
+        arr.add(TicketContact(1, "Noah", "description",12))
+        arr.add(TicketContact(1, "Noah ", "description",12))
+        arr.add(TicketContact(1, "Noah", "description",12))
+        arr.add(TicketContact(1, "Noah ", "description",12))
+        arr.add(TicketContact(1, "Noah", "description",12))
+//        arr.add(TicketContact(1, "Noah ", "description",12)))
+        arr.add(TicketContact(1, "Noah", "description",12))
+        arr.add(TicketContact(1, "Noah ", "description",45))
+        arr.add(TicketContact(1, "Noah", "description",33))
+        arr.add(TicketContact(1, "Noah ", "description",36))
+        arr.add(TicketContact(1, "Noah", "description",21))
+        arr.add(TicketContact(1, "Noah ", "description",33))
+        arr.add(TicketContact(1, "Noah", "description",46))
+        arr.add(TicketContact(1, "Noah ", "description",66))
+        arr.add(TicketContact(1, "Noah", "description",23))
+        arr.add(TicketContact(1, "Noah ", "description",28))
+        arr.add(TicketContact(1, "Noah", "description",23))
+        arr.add(TicketContact(1, "Noah ", "description",25))
 
-        arr.add(TicketContact(1, "Charlie ", "description"))
-        arr.add(TicketContact(1, "Hamza ", "description"))
-        arr.add(TicketContact(1, "Alfie ", "description"))
-        arr.add(TicketContact(1, "Charlie ", "description"))
-        arr.add(TicketContact(1, "Charlie ", "description"))
-        arr.add(TicketContact(1, "Lily ", "description"))
-        arr.add(TicketContact(1, "Jacob ", "description"))
-        arr.add(TicketContact(1, "Sophia ", "description"))
-        arr.add(TicketContact(1, "Sophia ", "description"))
-        arr.add(TicketContact(1, "Alfie ", "description"))
+        arr.add(TicketContact(1, "Charlie ", "description",34))
+        arr.add(TicketContact(1, "Hamza ", "description",45))
+        arr.add(TicketContact(1, "Alfie ", "description",111))
+        arr.add(TicketContact(1, "Charlie ", "description",110))
+        arr.add(TicketContact(1, "Charlie ", "description",2))
+        arr.add(TicketContact(1, "Lily ", "description",11))
+        arr.add(TicketContact(1, "Jacob ", "description",14))
+        arr.add(TicketContact(1, "Sophia ", "description",13))
+        arr.add(TicketContact(1, "Sophia ", "description",2))
+        arr.add(TicketContact(1, "Alfie ", "description",22))
     }
 }
